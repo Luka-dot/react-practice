@@ -9,8 +9,8 @@ export const Card = (props) => (
         <h2>
             { props.singleContact.name }
         </h2>
-        <h2>
+        <h4>
             { props.singleContact.email }
-        </h2>
+        </h4>
     </div>
 )

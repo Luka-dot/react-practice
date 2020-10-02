@@ -9,7 +9,8 @@ class App extends Component {
     super();
 
     this.state = {
-      contacts: []
+      contacts: [],
+      searchFiels: ''
     }
   }
 
@@ -22,6 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <input type='search' placeholder='Search contacts' onChange={e => this.setState({ searchFiels: e.target.value })} />
         <CartList name={this.state.contact} cardContacts={this.state.contacts}>
         
         </CartList>
