@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import CartList from './components/card-list/card-list.component'
-
+import SearchBox from './components/search-box';
 
 class App extends Component {
   constructor() {
@@ -29,7 +29,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <input type='search' placeholder='Search contacts' onChange={e => this.setState({ searchField: e.target.value })} />
+        <SearchBox placeholder='Search contacts' handleChange={e => this.setState({ searchField: e.target.value })} />
         <CartList name={filteredContacts} cardContacts={filteredContacts}>
         
         </CartList>
