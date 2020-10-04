@@ -10,7 +10,7 @@ class App extends Component {
 
     this.state = {
       contacts: [],
-      searchFiels: ''
+      searchField: ''
     }
   }
 
@@ -21,10 +21,16 @@ class App extends Component {
   }
 
   render() {
+    const { contacts, searchField } = this.state;
+
+    const filteredContacts = contacts.filter(contact => 
+      contact.name.toLowerCase().includes(searchField.toLocaleLowerCase())
+    )
+
     return (
       <div className="App">
-        <input type='search' placeholder='Search contacts' onChange={e => this.setState({ searchFiels: e.target.value })} />
-        <CartList name={this.state.contact} cardContacts={this.state.contacts}>
+        <input type='search' placeholder='Search contacts' onChange={e => this.setState({ searchField: e.target.value })} />
+        <CartList name={filteredContacts} cardContacts={this.state.contacts}>
         
         </CartList>
       </div>
