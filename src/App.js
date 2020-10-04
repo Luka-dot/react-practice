@@ -26,11 +26,11 @@ class App extends Component {
     const filteredContacts = contacts.filter(contact => 
       contact.name.toLowerCase().includes(searchField.toLocaleLowerCase())
     )
-
+    
     return (
       <div className="App">
         <input type='search' placeholder='Search contacts' onChange={e => this.setState({ searchField: e.target.value })} />
-        <CartList name={filteredContacts} cardContacts={this.state.contacts}>
+        <CartList name={filteredContacts} cardContacts={filteredContacts}>
         
         </CartList>
       </div>
