@@ -1,5 +1,11 @@
+.h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 72px;
+}
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {

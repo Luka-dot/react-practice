@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   handleSearchChange = (e) => {
-    this.setState({ searchField: e.target.value })
+    this.setState({ searchField: e.target.value });
   }
 
   render() {
@@ -35,7 +35,8 @@ class App extends Component {
     
     return (
       <div className="App">
-        <SearchBox placeholder='Search contacts' handleChange={handleSearchChange} />
+        <h1>Rolodex</h1>
+        <SearchBox placeholder='Search contacts' handleChange={this.handleSearchChange} />
         <CartList name={filteredContacts} cardContacts={filteredContacts}>
         
         </CartList>
