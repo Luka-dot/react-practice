@@ -13,7 +13,7 @@ class App extends Component {
       searchField: ''
     };
 
-    this.handleSearchChange = this.handleSearchChange.bind(this);
+  //  this.handleSearchChange = this.handleSearchChange.bind(this);
   }
 
   componentDidMount() {
@@ -22,7 +22,7 @@ class App extends Component {
       .then(users => this.setState({ contacts: users }))
   }
 
-  handleSearchChange(e) {
+  handleSearchChange = (e) => {
     this.setState({ searchField: e.target.value })
   }
 
